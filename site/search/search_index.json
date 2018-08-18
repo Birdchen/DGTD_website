@@ -1,0 +1,204 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "DGTD is a \nfast\n, \nlarge-scale\n, \nhigh-precision\n numerical simulation software for electromagnetic problems. DGTD is designed to solve the most common types of scattering problem, radiation problem and waveguide problem. DGTD is now in the state of new release, the relevant agencies are welcome to test the functions of DGTD.\n\n\nFeatures\n\n\n\n\nHigh Precision for Complex Structure Objects [Details].\n\n\nStructured-Unstructured Hybrid Mesh Technology \nDetails\n.\n\n\nDistributed High Performance Computing \nDetails\n.\n\n\nBe Suitable for Scattering, Radiation, Waveguide Problems \nDetails\n.\n\n\nPeculiar Inhomogeneous Wave Port Solver \nDetails\n.\n\n\nLocal Time Step and Explicit-Implicit Scheme Technology \nDetails\n.\n\n\n\n\n\n\n\n\nNews\n\n\n\n\n\n\n\n\nDate\n\n\nMessage\n\n\n\n\n\n\n\n\n\n\nJun 15, 2018\n\n\nCritical updates with Version 2.0 \nDetails\n.\n\n\n\n\n\n\nJun 10, 2018\n\n\nSPPS is avaible in DGTD \nDetails\n.\n\n\n\n\n\n\nJun  8, 2018\n\n\nDGTD Version 1.2 \nReleased\n.\n\n\n\n\n\n\nJun  1, 2018\n\n\nDGTD Version 1.0 \nPublished\n.\n\n\n\n\n\n\n\n\nLatest Release\n\n\nNew features\n\n\u250a \nExamples\n\n\u250a \nDocumentation\n\n\n\n\nDownload DGTD Version 1.0\n\n\n\n\nFor older releases see the \ndownload\n section.\n\n\nUser Guide\n\n\nInstall for Linux\n\n\u250a \nInstall for Windows\n\n\u250a \nParallel Guide\n\n\nScattering Application\n\n\u250a \nRadiation Application\n\n\u250a \nWaveguide Application\n\n\nMore details and functions are referenced to the \nManual Documentation\n.\n\n\nContact\n\n\nE-mail: birdchen207@gamil.com\n\nPhone : +8618752126351\n\nAdress: There is adress", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "High Precision for Complex Structure Objects [Details].  Structured-Unstructured Hybrid Mesh Technology  Details .  Distributed High Performance Computing  Details .  Be Suitable for Scattering, Radiation, Waveguide Problems  Details .  Peculiar Inhomogeneous Wave Port Solver  Details .  Local Time Step and Explicit-Implicit Scheme Technology  Details .", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/#news", 
+            "text": "Date  Message      Jun 15, 2018  Critical updates with Version 2.0  Details .    Jun 10, 2018  SPPS is avaible in DGTD  Details .    Jun  8, 2018  DGTD Version 1.2  Released .    Jun  1, 2018  DGTD Version 1.0  Published .", 
+            "title": "News"
+        }, 
+        {
+            "location": "/#latest-release", 
+            "text": "New features \n\u250a  Examples \n\u250a  Documentation   Download DGTD Version 1.0   For older releases see the  download  section.", 
+            "title": "Latest Release"
+        }, 
+        {
+            "location": "/#user-guide", 
+            "text": "Install for Linux \n\u250a  Install for Windows \n\u250a  Parallel Guide  Scattering Application \n\u250a  Radiation Application \n\u250a  Waveguide Application  More details and functions are referenced to the  Manual Documentation .", 
+            "title": "User Guide"
+        }, 
+        {
+            "location": "/#contact", 
+            "text": "E-mail: birdchen207@gamil.com \nPhone : +8618752126351 \nAdress: There is adress", 
+            "title": "Contact"
+        }, 
+        {
+            "location": "/features/", 
+            "text": "Features\n\n\nThis page shows the features of DGTD Numerical Simulation System. The DGTD is suitable for solving the scattering problems excited by plane wave, radiation problems excited by lumped port or wave port, wave guide problems excited by various mode of wave. \n\nThe DGTD have the parallel and distributed solver for electrically large problems, which can improve the computational performance and reduce the computational time. Otherwise DGTD is equipped with various kinds of numerical techniques in terms of algorithms.\n\n\nHigher-order Precision\n\n\n\nDGTD is FEM like algorithm, so it can compute based on the unstructured mesh or curve mesh, which fits better for some complex geometry. With the locality of DGTD scheme, the high order scheme is easily constructed with high order precision. In the complex condition, DGTD is obviously superior to FDTD or other structured mesh based algorithms. The hp-adaptive is also let the DGTD be adjustable on some meshes requring high precision. For some objects with simple structures, which is meshed with structured mesh, the DGTD is also high-order precision in this case. \n\n\nHybrid Mesh\n\n\n\nDGTD supports upper three mesh conditions:\n\n\n\n\nUnstructured Mesh\n\n\nStructured Mesh\n\n\nUnstructured-Structured Hybrid Mesh\n\n\n\n\nIn general conditions, we recommend users compute with DGTD based on unstructured mesh, which can lead to better accuracy, but in some cases, the objects contains both complex and simple structures, the complex structures are generated with unstructured mesh, and the simple structures are generated with structured mesh, this will maintain the high precision and reduce degree of freedom compared with fully unstructured mesh condition.\n\n\nLocal Time Step\n\n\n\nThe local time step (LTS) is the technique which can obviously reduce the computational time in below problems:\n\n\n\n\nMulti-Scale Problem\n\n\nComplex Geometry Problem\n\n\nTransient Problem\n\n\n\n\nIn multi-scale problems, the gap or hole will generate very small mesh, which leads to the tiny global time step. In order to keep the stability on small mesh, all the mesh should move with tiny time step in time domain, it causes large amount of computation time. To solve this problem, local time step technique requires different size of mesh move with different time step but keeps the stability, the large mesh will not concern on the tiny time step on small mesh, which save a lot of time.\n\n\nExplicit-Implicit Hybrid Scheme\n\n\n\nThe construction of DGTD scheme can be classfied into three categories:\n\n\n\n\nExplicit Scheme\n\n\nImplicit Scheme\n\n\nExplicit-Implicit Hybrid Scheme\n\n\n\n\nThese two schemes have their own advantages and their own shortcomings, the explicit scheme has a very good cell locality, suitable for parallelism. The implicit scheme causes the coupling between the cells, we need to solve a linear system, which leads to a decrease in the parallel effect, but the implicit scheme can lead to a larger time step, we have an explicit format on most grids, but we use the implicit scheme on the small grid, which makes the time step larger on the small grid.\n\n\nThus, the computation time on the small grid is reduced, and the whole computing time is reduced, meanwhile the parallel effect will not drop down, this technology is based on the LTS technique.\n\n\nPlane Wave Excitation\n\n\n\nPlane wave excitation is mainly used in scattering problem. Plane wave propagates in specific direction, polarization mode is line polarization. Plane wave produces scattering wave after hitting the scattering objects, according to huygens equivalent principle, near field scattering wave is mapped to far field, so far field distribution can be obtained. The far field information of scattering object is called Radaring Crossing Section (RCS), our proposed DGTD now realize bistatic RCS, which is the most common condition in modern radar detection. The RCS problem is always be electrically large, such as aircraft and warships\n\n\nLumped Port Excitation\n\n\n\nThis port is mainly used in radiation problems. As a simplified excitation source, the structure of a metal patch replaces the coaxial line structure. In some cases, the wave port is not convenient introduced in simulation environment, such as dipole, so the lumped port is constructed to solve those cases. It should be noted that the S parameter of lumped port is not the same as wave port, it computes S parameter based on impedance matching. The lumped-port only need to introduce magnetic source, the structure is simpler, most of the situation can be achieved as accurate as that excited by wave port.\n\n\nWave Port Excitation\n\n\n\nWave port is a physical structure, it is used to simulate the transmission of electromagnetic wave in the coaxial lines. Because of its physical characteristics, which is modeling according to the coaxial line in real life, wave port can result in more accurate calculation results and closer to the actual experimental results. The S parameter obtained by wave port is based on the incident and reflect wave. If conditions permit, wave port is the first recommended choice of port mode in the electromagnetic wave simulation.\n\nIn the antenna problem, the wave port is mainly stimulated by the form of TEM wave.\n\n\nModal Wave (TE,TM,TEM) Excitation\n\n\n\nIn the waveguide problem, there are different modes of wave in the transmission line, such as:\n\n\n\n\nTe Mode\n\n\nTM Mode\n\n\nTEM Mode\n\n\nOther Mixed Mode\n\n\n\n\nDifferent excitation modes will lead to different results. In the waveguide problem, we need to select a specific type of mode wave, different modes of wave port excitation have been achieved in our proposed DGTD algorithm.\n\n\nHPC Distributed System\n\n\n\nIn order to achieve faster calculation speed, DGTD realizes the multiple cores parallel on the single machine and distributed parallel on the cluster. With distributed system,  DGTD can achieve the parallel scale of the thousand cores under the Linux system, and has the advantage on calculating the electrically large size problem. With parallel system, DGTD and can reduce the calculation time obviously on the single machine by the multi-core parallel. Parallel efficiency of our proposed DGTD can reach more than 90%.", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/features/#features", 
+            "text": "This page shows the features of DGTD Numerical Simulation System. The DGTD is suitable for solving the scattering problems excited by plane wave, radiation problems excited by lumped port or wave port, wave guide problems excited by various mode of wave.  \nThe DGTD have the parallel and distributed solver for electrically large problems, which can improve the computational performance and reduce the computational time. Otherwise DGTD is equipped with various kinds of numerical techniques in terms of algorithms.", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/features/#higher-order-precision", 
+            "text": "DGTD is FEM like algorithm, so it can compute based on the unstructured mesh or curve mesh, which fits better for some complex geometry. With the locality of DGTD scheme, the high order scheme is easily constructed with high order precision. In the complex condition, DGTD is obviously superior to FDTD or other structured mesh based algorithms. The hp-adaptive is also let the DGTD be adjustable on some meshes requring high precision. For some objects with simple structures, which is meshed with structured mesh, the DGTD is also high-order precision in this case.", 
+            "title": "Higher-order Precision"
+        }, 
+        {
+            "location": "/features/#hybrid-mesh", 
+            "text": "DGTD supports upper three mesh conditions:   Unstructured Mesh  Structured Mesh  Unstructured-Structured Hybrid Mesh   In general conditions, we recommend users compute with DGTD based on unstructured mesh, which can lead to better accuracy, but in some cases, the objects contains both complex and simple structures, the complex structures are generated with unstructured mesh, and the simple structures are generated with structured mesh, this will maintain the high precision and reduce degree of freedom compared with fully unstructured mesh condition.", 
+            "title": "Hybrid Mesh"
+        }, 
+        {
+            "location": "/features/#local-time-step", 
+            "text": "The local time step (LTS) is the technique which can obviously reduce the computational time in below problems:   Multi-Scale Problem  Complex Geometry Problem  Transient Problem   In multi-scale problems, the gap or hole will generate very small mesh, which leads to the tiny global time step. In order to keep the stability on small mesh, all the mesh should move with tiny time step in time domain, it causes large amount of computation time. To solve this problem, local time step technique requires different size of mesh move with different time step but keeps the stability, the large mesh will not concern on the tiny time step on small mesh, which save a lot of time.", 
+            "title": "Local Time Step"
+        }, 
+        {
+            "location": "/features/#explicit-implicit-hybrid-scheme", 
+            "text": "The construction of DGTD scheme can be classfied into three categories:   Explicit Scheme  Implicit Scheme  Explicit-Implicit Hybrid Scheme   These two schemes have their own advantages and their own shortcomings, the explicit scheme has a very good cell locality, suitable for parallelism. The implicit scheme causes the coupling between the cells, we need to solve a linear system, which leads to a decrease in the parallel effect, but the implicit scheme can lead to a larger time step, we have an explicit format on most grids, but we use the implicit scheme on the small grid, which makes the time step larger on the small grid.  Thus, the computation time on the small grid is reduced, and the whole computing time is reduced, meanwhile the parallel effect will not drop down, this technology is based on the LTS technique.", 
+            "title": "Explicit-Implicit Hybrid Scheme"
+        }, 
+        {
+            "location": "/features/#plane-wave-excitation", 
+            "text": "Plane wave excitation is mainly used in scattering problem. Plane wave propagates in specific direction, polarization mode is line polarization. Plane wave produces scattering wave after hitting the scattering objects, according to huygens equivalent principle, near field scattering wave is mapped to far field, so far field distribution can be obtained. The far field information of scattering object is called Radaring Crossing Section (RCS), our proposed DGTD now realize bistatic RCS, which is the most common condition in modern radar detection. The RCS problem is always be electrically large, such as aircraft and warships", 
+            "title": "Plane Wave Excitation"
+        }, 
+        {
+            "location": "/features/#lumped-port-excitation", 
+            "text": "This port is mainly used in radiation problems. As a simplified excitation source, the structure of a metal patch replaces the coaxial line structure. In some cases, the wave port is not convenient introduced in simulation environment, such as dipole, so the lumped port is constructed to solve those cases. It should be noted that the S parameter of lumped port is not the same as wave port, it computes S parameter based on impedance matching. The lumped-port only need to introduce magnetic source, the structure is simpler, most of the situation can be achieved as accurate as that excited by wave port.", 
+            "title": "Lumped Port Excitation"
+        }, 
+        {
+            "location": "/features/#wave-port-excitation", 
+            "text": "Wave port is a physical structure, it is used to simulate the transmission of electromagnetic wave in the coaxial lines. Because of its physical characteristics, which is modeling according to the coaxial line in real life, wave port can result in more accurate calculation results and closer to the actual experimental results. The S parameter obtained by wave port is based on the incident and reflect wave. If conditions permit, wave port is the first recommended choice of port mode in the electromagnetic wave simulation. \nIn the antenna problem, the wave port is mainly stimulated by the form of TEM wave.", 
+            "title": "Wave Port Excitation"
+        }, 
+        {
+            "location": "/features/#modal-wave-tetmtem-excitation", 
+            "text": "In the waveguide problem, there are different modes of wave in the transmission line, such as:   Te Mode  TM Mode  TEM Mode  Other Mixed Mode   Different excitation modes will lead to different results. In the waveguide problem, we need to select a specific type of mode wave, different modes of wave port excitation have been achieved in our proposed DGTD algorithm.", 
+            "title": "Modal Wave (TE,TM,TEM) Excitation"
+        }, 
+        {
+            "location": "/features/#hpc-distributed-system", 
+            "text": "In order to achieve faster calculation speed, DGTD realizes the multiple cores parallel on the single machine and distributed parallel on the cluster. With distributed system,  DGTD can achieve the parallel scale of the thousand cores under the Linux system, and has the advantage on calculating the electrically large size problem. With parallel system, DGTD and can reduce the calculation time obviously on the single machine by the multi-core parallel. Parallel efficiency of our proposed DGTD can reach more than 90%.", 
+            "title": "HPC Distributed System"
+        }, 
+        {
+            "location": "/examples/examples_contents/", 
+            "text": "The contents is in pregress and coming soon.", 
+            "title": "Contents"
+        }, 
+        {
+            "location": "/examples/rcs/", 
+            "text": "The contents of rcs is in pregress and coming soon.", 
+            "title": "RCS"
+        }, 
+        {
+            "location": "/examples/antenna/", 
+            "text": "The contents of antenna is in pregress and coming soon.", 
+            "title": "Antenna"
+        }, 
+        {
+            "location": "/examples/waveguide/", 
+            "text": "The contents of waveguide is in pregress and coming soon.", 
+            "title": "Waveguide"
+        }, 
+        {
+            "location": "/documentation/doc_contents/", 
+            "text": "The contents of documentation is in pregress and coming soon.", 
+            "title": "Contents"
+        }, 
+        {
+            "location": "/documentation/release_notes/", 
+            "text": "First Version Notes", 
+            "title": "Version"
+        }, 
+        {
+            "location": "/documentation/release_notes/#first-version-notes", 
+            "text": "", 
+            "title": "First Version Notes"
+        }, 
+        {
+            "location": "/documentation/install/", 
+            "text": "The contents of install is in pregress and coming soon.", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/documentation/modeling/", 
+            "text": "The contents of modeling is in pregress and coming soon.", 
+            "title": "Modeling"
+        }, 
+        {
+            "location": "/documentation/meshing/", 
+            "text": "The contents of meshing is in pregress and coming soon.", 
+            "title": "Meshing"
+        }, 
+        {
+            "location": "/documentation/source/", 
+            "text": "The contents of source is in pregress and coming soon.", 
+            "title": "Source"
+        }, 
+        {
+            "location": "/documentation/electromagnetics/", 
+            "text": "The contents of electromagnetics is in pregress and coming soon.", 
+            "title": "Electromagnetics"
+        }, 
+        {
+            "location": "/documentation/optimization/", 
+            "text": "The contents of optimization is in pregress and coming soon.", 
+            "title": "Optimization"
+        }, 
+        {
+            "location": "/documentation/plotting/", 
+            "text": "The contents of plotting is in pregress and coming soon.", 
+            "title": "Plotting"
+        }, 
+        {
+            "location": "/documentation/hardware/", 
+            "text": "The contents of hardware acceleration is in pregress and coming soon.", 
+            "title": "Hardware Acceleration"
+        }, 
+        {
+            "location": "/team/", 
+            "text": "The DGTD Team\n\n\n\n\nProfessor\n\n\n\n    \n\n    \n\n    \n\n    \nLei Zhao\n\n\n\n\n\n    \n\n    \n\n    \n\n    \nWenhua Yu\n\n\n\n\n\n\n\n\nMaster\n\n\n\n\n\nFormer Members\n\n\n\n\nGeng Chen\n\n\nHaoqing Chen", 
+            "title": "Team"
+        }, 
+        {
+            "location": "/team/#the-dgtd-team", 
+            "text": "", 
+            "title": "The DGTD Team"
+        }, 
+        {
+            "location": "/team/#professor", 
+            "text": "Lei Zhao   \n     \n     \n     \n     Wenhua Yu", 
+            "title": "Professor"
+        }, 
+        {
+            "location": "/team/#master", 
+            "text": "", 
+            "title": "Master"
+        }, 
+        {
+            "location": "/team/#former-members", 
+            "text": "Geng Chen  Haoqing Chen", 
+            "title": "Former Members"
+        }, 
+        {
+            "location": "/download/", 
+            "text": "Latest Release\n\n\nNew features\n\n\u250a \nExamples\n\n\u250a \nDocumentation\n\n\n\n\nDownload DGTD-1.0.tgz\n\n\n\n\nPlease send e-mail to us to report bugs or post questions.\n\n\nAll Releases\n\n\n\n\n\n\n\n\nFilename\n\n\nVersion\n\n\nRelease Date\n\n\nSize\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\nDTD-1.0.tgz\n\n\nv1.0\n\n\nMay 2018\n\n\n4.4M\n\n\nnotes for here\n\n\n\n\n\n\nDGTD-beta.tgz\n\n\nv1.0-beta\n\n\nNov 2017\n\n\n4.2M\n\n\nnote for", 
+            "title": "Download"
+        }, 
+        {
+            "location": "/download/#latest-release", 
+            "text": "New features \n\u250a  Examples \n\u250a  Documentation   Download DGTD-1.0.tgz   Please send e-mail to us to report bugs or post questions.", 
+            "title": "Latest Release"
+        }, 
+        {
+            "location": "/download/#all-releases", 
+            "text": "Filename  Version  Release Date  Size  Notes      DTD-1.0.tgz  v1.0  May 2018  4.4M  notes for here    DGTD-beta.tgz  v1.0-beta  Nov 2017  4.2M  note for", 
+            "title": "All Releases"
+        }
+    ]
+}

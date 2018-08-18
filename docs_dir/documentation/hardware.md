@@ -1,0 +1,1 @@
+**The contents of hardware acceleration is in pregress and coming soon.**

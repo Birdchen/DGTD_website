@@ -1,0 +1,32 @@
+site_name: Home
+docs_dir: 'docs_dir'
+
+markdown_extensions:
+- extra  # allow markdown in <div markdown="1">
+- fenced_code  # GitHub style code blocks, e.g. ```python, see http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html for a list of languages
+
+pages:
+- Home: index.md
+- Features: features.md
+- Examples:
+  - 'Contents': examples/examples_contents.md
+  - 'RCS': examples/rcs.md
+  - 'Antenna': examples/antenna.md
+  - 'Waveguide': examples/waveguide.md
+- Documentation:
+  - 'Contents': documentation/doc_contents.md
+  - 'Version': documentation/release_notes.md
+  - 'Install': documentation/install.md
+  - 'Modeling': documentation/modeling.md
+  - 'Meshing': documentation/meshing.md
+  - 'Source': documentation/source.md
+  - 'Electromagnetics': documentation/electromagnetics.md
+  - 'Optimization': documentation/optimization.md
+  - 'Plotting': documentation/plotting.md
+  - 'Hardware Acceleration': documentation/hardware.md
+- Team: team.md
+- Download: download.md
+
+theme_dir: template
+
+include_next_prev: false  # turn off next/previous buttons
